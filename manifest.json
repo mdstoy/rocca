@@ -1,15 +1,19 @@
 {
-   "manifest_version": 2,
-   "name": "Rocca",
-   "default_locale": "en_US",
-   "background": {
-      "scripts": [ "background.js" ]
-   },
-   "content_scripts": [ {
-      "js": [ "script.js" ],
-      "matches": [ "http://*/*", "https://*/*" ]
-   } ],
-   "description": "a rocker gesture extention",
-   "permissions": [ "tabs" ],
-   "version": "0.0.1"
+	"manifest_version": 2,
+	"name": "Rocca",
+	"version": "0.0.9",
+
+	"default_locale": "en_US",
+	"description": "a rocker gesture extention",
+
+	"background": {
+		"scripts": [ "background.js" ],
+		"persistent": false
+	},
+	"content_scripts": [ {
+		"js": [ "script.js" ],
+		"matches": [ "http://*/*", "https://*/*" ]
+	} ],
+	"permissions": [ "tabs" ]
 }
+

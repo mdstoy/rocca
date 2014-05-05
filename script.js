@@ -1,3 +1,5 @@
+var L_BUTTON = 0;
+var R_BUTTON = 2;
 
 var canShowContext = false;
 
@@ -7,16 +9,16 @@ var rmousedown = false;
 window.addEventListener('mousedown', function(e){
 
 	console.log("down:" + e.button);
-	if(e.button == 0){
+	if(e.button == L_BUTTON){
 		lmousedown = true;
-	}else if(e.button == 2){
+	}else if(e.button == R_BUTTON){
 		rmousedown = true;
 	}
 
-	if(e.button == 0 && rmousedown){
+	if(e.button == L_BUTTON && rmousedown){
 		execGesture("rl");
 		lmousedown = false;
-	}else if(e.button == 2 && lmousedown){
+	}else if(e.button == R_BUTTON && lmousedown){
 		execGesture("lr");
 		rmousedown = false;
 		canShowContext = false;
@@ -26,10 +28,10 @@ window.addEventListener('mousedown', function(e){
 window.addEventListener('mouseup', function(e){
 
 	console.log("up:" + e.button);
-	if(e.button == 0){
+	if(e.button == L_BUTTON){
 		lmousedown = false;
 		canShowContext = false;
-	}else if(e.button == 2){
+	}else if(e.button == R_BUTTON){
 		if(rmousedown){
 			rmousedown = false;
 			canShowContext = true;
@@ -53,7 +55,7 @@ function execGesture(action){
 	if(action == "lr"){
 		history.back();
 	}else{
-		chrome.extension.sendRequest({gesture: action});
+		chrome.runtime.sendMessage({gesture: action});
 	}
 }
 
