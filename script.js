@@ -1,5 +1,5 @@
 
-var canShowContext = 0;
+var canShowContext = false;
 
 var lmousedown = false;
 var rmousedown = false;
@@ -9,41 +9,51 @@ window.addEventListener('mousedown', function(e){
 	console.log("down:" + e.button);
 	if(e.button == 0){
 		lmousedown = true;
-	}else{
+	}else if(e.button == 2){
 		rmousedown = true;
 	}
 
 	if(e.button == 0 && rmousedown){
 		execGesture("rl");
-	}else if(e.button != 0){
-		console.log("ほげ");
+		lmousedown = false;
+	}else if(e.button == 2 && lmousedown){
+		execGesture("lr");
+		rmousedown = false;
+		canShowContext = false;
 	}
 });
 
 window.addEventListener('mouseup', function(e){
 
 	console.log("up:" + e.button);
-
 	if(e.button == 0){
 		lmousedown = false;
-		canShowContext = 0;
-	}else{
-		rmousedown = false;
-		++canShowContext;
+		canShowContext = false;
+	}else if(e.button == 2){
+		if(rmousedown){
+			rmousedown = false;
+			canShowContext = true;
+		}
 	}
 });
 
 window.addEventListener('contextmenu', function(e){
-	if(canShowContext == 1){
-		canShowContext = 0;
+	if(canShowContext){
+		// after shown contextmenu, reset mouse state
+		rmousedown = false;
+		canShowContext = false;
 	}else{
 		e.preventDefault();
 		e.stopPropagation();
 	}
 });
 
-function execGesture(type){
-	console.log("exec!!" + type);
-	chrome.extension.sendRequest({gesture: type});
+function execGesture(action){
+	console.log("exec!!" + action);
+	if(action == "lr"){
+		history.back();
+	}else{
+		chrome.extension.sendRequest({gesture: action});
+	}
 }
 
