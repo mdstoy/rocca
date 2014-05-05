@@ -15,8 +15,11 @@ window.addEventListener('mousedown', function(e){
 
 	if(e.button == 0 && rmousedown){
 		execGesture("rl");
+		lmousedown = false;
 	}else if(e.button == 2 && lmousedown){
 		execGesture("lr");
+		rmousedown = false;
+		canShowContext = false;
 	}
 });
 
@@ -26,9 +29,11 @@ window.addEventListener('mouseup', function(e){
 	if(e.button == 0){
 		lmousedown = false;
 		canShowContext = false;
-	}else{
-		rmousedown = false;
-		canShowContext = true;
+	}else if(e.button == 2){
+		if(rmousedown){
+			rmousedown = false;
+			canShowContext = true;
+		}
 	}
 });
 
@@ -43,8 +48,12 @@ window.addEventListener('contextmenu', function(e){
 	}
 });
 
-function execGesture(type){
-	console.log("exec!!" + type);
-	chrome.extension.sendRequest({gesture: type});
+function execGesture(action){
+	console.log("exec!!" + action);
+	if(action == "lr"){
+		history.back();
+	}else{
+		chrome.extension.sendRequest({gesture: action});
+	}
 }
 
