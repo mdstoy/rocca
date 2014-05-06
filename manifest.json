@@ -7,14 +7,15 @@
 	"default_locale": "en_US",
 	"description": "a rocker gesture extention",
 
-	"background": {
-		"scripts": [ "event.js" ],
-		"persistent": false
-	},
 	"content_scripts": [ {
 		"matches": [ "http://*/*", "https://*/*" ],
 		"js": [ "content.js" ]
 	} ],
-	"permissions": [ "tabs" ]
+	"background": {
+		"scripts": [ "event.js" ],
+		"persistent": false
+	},
+	"permissions": [ "tabs", "storage" ],
+	"options_page": "option.html"
 }
 
