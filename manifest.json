@@ -4,7 +4,7 @@
 	"short_name": "Rocca",
 	"version": "0.0.9.1",
 
-	"default_locale": "en",
+	"default_locale": "ja",
 	"description": "a rocker gesture extention",
 	"icons": {
 		"16": "icon16.png",
@@ -23,6 +23,6 @@
 		"persistent": false
 	},
 	"permissions": [ "tabs", "storage" ],
-	"options_page": "option.html"
+	"options_page": "options.html"
 }
 

@@ -8,7 +8,7 @@ var rmousedown = false;
 
 window.addEventListener('mousedown', function(e){
 
-	console.log("down:" + e.button);
+	//console.log("down:" + e.button);
 	if(e.button == L_BUTTON){
 		lmousedown = true;
 	}else if(e.button == R_BUTTON){
@@ -27,7 +27,7 @@ window.addEventListener('mousedown', function(e){
 
 window.addEventListener('mouseup', function(e){
 
-	console.log("up:" + e.button);
+	//console.log("up:" + e.button);
 	if(e.button == L_BUTTON){
 		lmousedown = false;
 		canShowContext = false;
@@ -51,7 +51,7 @@ window.addEventListener('contextmenu', function(e){
 });
 
 function execGesture(action){
-	console.log("exec!!" + action);
+	//console.log("exec!!" + action);
 	if(action == "lr"){
 		history.back();
 	}else{
