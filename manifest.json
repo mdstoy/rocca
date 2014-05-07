@@ -1,11 +1,18 @@
 {
 	"manifest_version": 2,
-	"name": "Rocca, Rocker gestures for Google Chrome",
+	"name": "Rocca",
 	"short_name": "Rocca",
-	"version": "0.0.9",
+	"version": "0.0.9.1",
 
-	"default_locale": "en_US",
+	"default_locale": "en",
 	"description": "a rocker gesture extention",
+	"icons": {
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	},
+
+	"homepage_url": "https://github.com/mdstoy/rocca",
 
 	"content_scripts": [ {
 		"matches": [ "http://*/*", "https://*/*" ],
