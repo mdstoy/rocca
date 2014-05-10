@@ -1,6 +1,7 @@
 $(function(){
 	chrome.storage.sync.get({lr: 'history_back', rl: 'tab_remove'}, function(items){
 		$('#lr').val(items.lr);
+		$('#lr_' + items.lr).prop('checked', true);
 		$('#rl').val(items.rl);
 	});	
 

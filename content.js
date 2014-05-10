@@ -52,11 +52,13 @@ $(function(){
 });
 
 function execGesture(action){
-	console.log("exec!!" + action);
+	//console.log("exec!!" + action);
 	chrome.runtime.sendMessage({gesture: action}, function(response){
 		console.log(response);
 		if(response == 'history_back'){
 			history.back();
+		}else if(response == 'history_forward'){
+			history.forward();
 		}
 	});
 }
