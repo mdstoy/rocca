@@ -54,11 +54,13 @@ $(function(){
 function execGesture(action){
 	//console.log("exec!!" + action);
 	chrome.runtime.sendMessage({gesture: action}, function(response){
-		console.log(response);
+		console.log("resp:"+response);
 		if(response == 'history_back'){
 			history.back();
 		}else if(response == 'history_forward'){
 			history.forward();
+		}else if(response == 'reload'){
+			location.reload();
 		}
 	});
 }

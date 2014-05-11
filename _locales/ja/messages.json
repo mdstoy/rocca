@@ -1,3 +1,19 @@
 {
+	"tabRemove": {
+		"message": "タブを閉じる",
+		"description": "Tab Remove"
+	},
+	"historyBack": {
+		"message": "戻る",
+		"description": "History back"
+	},
+	"historyForward": {
+		"message": "進む",
+		"description": "History forward"
+	},
+	"reload": {
+		"message": "更新",
+		"description": "Reload"
+	}
 }
 

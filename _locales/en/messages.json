@@ -1,3 +1,19 @@
 {
+	"tabRemove": {
+		"message": "Tab Remove",
+		"description": "Tab Remove"
+	},
+	"historyBack": {
+		"message": "History Back",
+		"description": "History back"
+	},
+	"historyForward": {
+		"message": "History Forward",
+		"description": "History forward"
+	},
+	"reload": {
+		"message": "reload",
+		"description": "Reload"
+	}
 }
 
