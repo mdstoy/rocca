@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Rocca, Rocker Gesture for Google Chrome",
 	"short_name": "Rocca",
-	"version": "0.1",
+	"version": "0.1.1",
 
 	"default_locale": "ja",
 	"description": "a rocker gesture extention",
