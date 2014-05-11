@@ -1,14 +1,13 @@
 $(function(){
 	chrome.storage.sync.get({lr: 'history_back', rl: 'tab_remove'}, function(items){
-		$('#lr').val(items.lr);
+		$('#rl_' + items.rl).prop('checked', true);
 		$('#lr_' + items.lr).prop('checked', true);
-		$('#rl').val(items.rl);
-	});	
+	});
 
 	// onclick
 	$('#save').click(function(){
-		var lr_value = $('#lr').val();
-		var rl_value = $('#rl').val();
+		var rl_value = $('input[name="rl"]:checked').val();
+		var lr_value = $('input[name="lr"]:checked').val();
 		chrome.storage.sync.set({
 			lr:lr_value, 
 			rl:rl_value 

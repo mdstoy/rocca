@@ -2,35 +2,34 @@
 <html>
 <head><title>Rocca Options</title></head>
 <body>
-<section>
-L -> R :
-<select id="lr">
- <option value="tab_remove">Tab Remove</option>
- <option value="history_back">History Back</option>
- <option value="history_forward">History Forward</option>
-</select>
-</section>
-<section>
-R -> L :
-<select id="rl">
- <option value="tab_remove">Tab Remove</option>
- <option value="history_back">History Back</option>
- <option value="history_forward">History Forward</option>
-</select>
-</section>
 <table border="1">
 <thead>
 <th>action</th><th>R->L</th><th>L->R</th><th>gesture</th>
 </thead>
 <tbody>
 <tr>
-<td>Tab Remove</td><td><input type="radio" name="rl" value="tab_remove"></td><td><input type="radio" name="lr" value="tab_remove" id="lr_tab_remove"></td><td><input type="text" name="tab_remove"></td>
+  <td>Tab Remove</td>
+  <td><input type="radio" name="rl" value="tab_remove" id="rl_tab_remove"></td>
+  <td><input type="radio" name="lr" value="tab_remove" id="lr_tab_remove"></td>
+  <td><input type="text" name="tab_remove"></td>
 </tr>
 <tr>
-<td>History Back</td><td><input type="radio" name="rl" value="history_back"></td><td><input type="radio" name="lr" value="history_back" id="lr_history_back"></td><td><input type="text" name="history_back"></td>
+  <td>chrome.i18n.getMessage("historyBack")History Back</td>
+  <td><input type="radio" name="rl" value="history_back" id="rl_history_back"></td>
+  <td><input type="radio" name="lr" value="history_back" id="lr_history_back"></td>
+  <td><input type="text" name="history_back"></td>
 </tr>
 <tr>
-<td>History Forward</td><td><input type="radio" name="rl" value="history_forward"></td><td><input type="radio" name="lr" value="history_forward" id="lr_history_forward"></td><td><input type="text" name="history_forward"></td>
+  <td>History Forward</td>
+  <td><input type="radio" name="rl" value="history_forward" id="rl_history_forward"></td>
+  <td><input type="radio" name="lr" value="history_forward" id="lr_history_forward"></td>
+  <td><input type="text" name="history_forward"></td>
+</tr>
+<tr>
+  <td>History Forward</td>
+  <td><input type="radio" name="rl" value="history_forward" id="rl_history_forward"></td>
+  <td><input type="radio" name="lr" value="history_forward" id="lr_history_forward"></td>
+  <td><input type="text" name="history_forward"></td>
 </tr>
 </tbody>
 </table>
