@@ -29,19 +29,23 @@ $(function(){
 
 	createRows(data);
 
-	chrome.storage.sync.get({lr: 'history_back', rl: 'tab_remove'}, function(items){
-		$('#rl_' + items.rl).prop('checked', true);
-		$('#lr_' + items.lr).prop('checked', true);
+	chrome.storage.sync.get('rocca_setting', function(items){
+		var setting = JSON.parse(items.rocca_setting);
+		// rocker gesture settings
+		var rocker_setting = setting.rocker;
+		$('#rl_' + rocker_setting.rl).prop('checked', true);
+		$('#lr_' + rocker_setting.lr).prop('checked', true);
 	});
 
 	// onclick
 	$('#save').click(function(){
 		var rl_value = $('input[name="rl"]:checked').val();
 		var lr_value = $('input[name="lr"]:checked').val();
-		chrome.storage.sync.set({
-			lr:lr_value, 
-			rl:rl_value 
-		}, function(){
+
+		var setting = {'rocker': {'rl': rl_value, 'lr': lr_value}};
+		var setting_json = JSON.stringify(setting);
+
+		chrome.storage.sync.set({'rocca_setting': setting_json}, function(){
 			$('#status').text(chrome.i18n.getMessage('saved'));
 		});
 	});
