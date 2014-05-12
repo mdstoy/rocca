@@ -42,7 +42,7 @@ $(function(){
 			lr:lr_value, 
 			rl:rl_value 
 		}, function(){
-			$('#status').text('saved');
+			$('#status').text(chrome.i18n.getMessage('saved'));
 		});
 	});
 });
