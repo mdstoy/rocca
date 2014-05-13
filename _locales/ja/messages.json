@@ -11,6 +11,18 @@
 	"reload": {
 		"message": "更新"
 	},
+	"tabRemoveAllRight": {
+		"message": "右のタブをすべて閉じる"
+	},
+	"tabRemoveAllRightNotPin": {
+		"message": "右の固定されていないタブをすべて閉じる"
+	},
+	"tabRemoveAllLeft": {
+		"message": "左のタブをすべて閉じる"
+	},
+	"tabRemoveAllLeftNotPin": {
+		"message": "左の固定されていないタブをすべて閉じる"
+	},
 	// message
 	"saved": {
 		"message": "保存しました"

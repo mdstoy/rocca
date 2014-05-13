@@ -16,6 +16,51 @@ chrome.runtime.onMessage.addListener(
 
 			if(action == 'tab_remove'){
 				chrome.tabs.remove(sender.tab.id);
+			}else if(action.lastIndexOf('tab_remove_all', 0) === 0){
+				var target = action.substring(15);
+				chrome.tabs.query({currentWindow: true}, function(tabs){
+					if(target == 'right'){
+						var f = false;
+						$.each(tabs, function(index, tab){
+							if(f){
+								chrome.tabs.remove(tab.id);
+							}else if(tab.highlighted){
+								f = true;
+							}
+						});
+					}else if(target == 'right_not_pin'){
+						var f = false;
+						$.each(tabs, function(index, tab){
+							if(f){
+								if(!tab.pinned){
+									chrome.tabs.remove(tab.id);
+								}
+							}else if(tab.highlighted){
+								f = true;
+							}
+						});
+					}else if(target == 'left'){
+						var f = false;
+						$.each(tabs.reverse(), function(index, tab){
+							if(f){
+								chrome.tabs.remove(tab.id);
+							}else if(tab.highlighted){
+								f = true;
+							}
+						});
+					}else if(target == 'left_not_pin'){
+						var f = false;
+						$.each(tabs.reverse(), function(index, tab){
+							if(f){
+								if(!tab.pinned){
+									chrome.tabs.remove(tab.id);
+								}
+							}else if(tab.highlighted){
+								f = true;
+							}
+						});
+					}
+				});
 			}
 			sendResponse(action);
 		});

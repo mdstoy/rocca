@@ -1,6 +1,6 @@
 {
 	"tabRemove": {
-		"message": "Tab Remove"
+		"message": "Close Tab"
 	},
 	"historyBack": {
 		"message": "History Back"
@@ -9,7 +9,19 @@
 		"message": "History Forward"
 	},
 	"reload": {
-		"message": "reload"
+		"message": "Reload"
+	},
+	"tabRemoveAllRight": {
+		"message": "Close All Right Tab"
+	},
+	"tabRemoveAllRightNotPin": {
+		"message": "Close All Right Tab (Not Pinned)"
+	},
+	"tabRemoveAllLeft": {
+		"message": "Close All Left Tab"
+	},
+	"tabRemoveAllLeftNotPin": {
+		"message": "Close All Left Tab (Not Pinned)"
 	},
 	// messages
 	"saved": {
