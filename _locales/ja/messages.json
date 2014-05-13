@@ -11,6 +11,12 @@
 	"reload": {
 		"message": "更新"
 	},
+	"tabRemoveAllOther": {
+		"message": "他のタブをすべて閉じる"
+	},
+	"tabRemoveAllOtherNotPin": {
+		"message": "他の固定されていないタブをすべて閉じる"
+	},
 	"tabRemoveAllRight": {
 		"message": "右のタブをすべて閉じる"
 	},

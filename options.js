@@ -25,6 +25,8 @@ $(function(){
 		, "history_back"
 		, "history_forward"
 		, "reload"
+		, "tab_remove_all_other"
+		, "tab_remove_all_other_not_pin"
 		, "tab_remove_all_right"
 		, "tab_remove_all_right_not_pin"
 		, "tab_remove_all_left"

@@ -11,17 +11,23 @@
 	"reload": {
 		"message": "Reload"
 	},
+	"tabRemoveAllOther": {
+		"message": "Close All Other Tabs"
+	},
+	"tabRemoveAllOtherNotPin": {
+		"message": "Close All Other Tabs (Not Pinned)"
+	},
 	"tabRemoveAllRight": {
-		"message": "Close All Right Tab"
+		"message": "Close All Right Tabs"
 	},
 	"tabRemoveAllRightNotPin": {
-		"message": "Close All Right Tab (Not Pinned)"
+		"message": "Close All Right Tabs (Not Pinned)"
 	},
 	"tabRemoveAllLeft": {
-		"message": "Close All Left Tab"
+		"message": "Close All Left Tabs"
 	},
 	"tabRemoveAllLeftNotPin": {
-		"message": "Close All Left Tab (Not Pinned)"
+		"message": "Close All Left Tabs (Not Pinned)"
 	},
 	// messages
 	"saved": {

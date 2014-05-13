@@ -19,7 +19,21 @@ chrome.runtime.onMessage.addListener(
 			}else if(action.lastIndexOf('tab_remove_all', 0) === 0){
 				var target = action.substring(15);
 				chrome.tabs.query({currentWindow: true}, function(tabs){
-					if(target == 'right'){
+					if(target == 'other'){
+						$.each(tabs, function(index, tab){
+							if(!tab.highlighted){
+								chrome.tabs.remove(tab.id);
+							}
+						});
+					}else if(target == 'other_not_pin'){
+						$.each(tabs, function(index, tab){
+							if(!tab.highlighted){
+								if(!tab.pinned){
+									chrome.tabs.remove(tab.id);
+								}
+							}
+						});
+					}else if(target == 'right'){
 						var f = false;
 						$.each(tabs, function(index, tab){
 							if(f){
