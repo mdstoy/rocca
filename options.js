@@ -31,6 +31,7 @@ $(function(){
 		, "tab_remove_all_right_not_pin"
 		, "tab_remove_all_left"
 		, "tab_remove_all_left_not_pin"
+		, "pinned_tab"
 	];
 
 	createRows(data);

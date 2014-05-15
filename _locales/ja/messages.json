@@ -29,7 +29,10 @@
 	"tabRemoveAllLeftNotPin": {
 		"message": "左の固定されていないタブをすべて閉じる"
 	},
-	// message
+	"pinnedTab": {
+		"message": "タブの固定"
+	},
+	// messagest
 	"saved": {
 		"message": "保存しました"
 	}

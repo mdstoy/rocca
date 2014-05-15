@@ -75,7 +75,12 @@ chrome.runtime.onMessage.addListener(
 						});
 					}
 				});
+			}else if(action == 'pinned_tab'){
+				chrome.tabs.query({currentWindow: true, highlighted: true}, function(tabs){
+					chrome.tabs.update(tabs[0].id, {pinned: !tabs[0].pinned});
+				});
 			}
+
 			sendResponse(action);
 		});
 		return true;

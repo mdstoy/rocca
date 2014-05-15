@@ -15,19 +15,22 @@
 		"message": "Close All Other Tabs"
 	},
 	"tabRemoveAllOtherNotPin": {
-		"message": "Close All Other Tabs (Not Pinned)"
+		"message": "Close All Other Tabs (Not Pinned Only)"
 	},
 	"tabRemoveAllRight": {
 		"message": "Close All Right Tabs"
 	},
 	"tabRemoveAllRightNotPin": {
-		"message": "Close All Right Tabs (Not Pinned)"
+		"message": "Close All Right Tabs (Not Pinned Only)"
 	},
 	"tabRemoveAllLeft": {
 		"message": "Close All Left Tabs"
 	},
 	"tabRemoveAllLeftNotPin": {
-		"message": "Close All Left Tabs (Not Pinned)"
+		"message": "Close All Left Tabs (Not Pinned Only)"
+	},
+	"pinnedTab": {
+		"message": "Pinned Tab"
 	},
 	// messages
 	"saved": {
