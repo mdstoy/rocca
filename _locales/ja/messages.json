@@ -1,3 +1,40 @@
 {
+	"tabRemove": {
+		"message": "タブを閉じる"
+	},
+	"historyBack": {
+		"message": "戻る"
+	},
+	"historyForward": {
+		"message": "進む"
+	},
+	"reload": {
+		"message": "更新"
+	},
+	"tabRemoveAllOther": {
+		"message": "他のタブをすべて閉じる"
+	},
+	"tabRemoveAllOtherNotPin": {
+		"message": "他の固定されていないタブをすべて閉じる"
+	},
+	"tabRemoveAllRight": {
+		"message": "右のタブをすべて閉じる"
+	},
+	"tabRemoveAllRightNotPin": {
+		"message": "右の固定されていないタブをすべて閉じる"
+	},
+	"tabRemoveAllLeft": {
+		"message": "左のタブをすべて閉じる"
+	},
+	"tabRemoveAllLeftNotPin": {
+		"message": "左の固定されていないタブをすべて閉じる"
+	},
+	"pinnedTab": {
+		"message": "タブの固定"
+	},
+	// messagest
+	"saved": {
+		"message": "保存しました"
+	}
 }
 
