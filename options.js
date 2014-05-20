@@ -2,9 +2,9 @@ function createRows(data){
 
 	var rows = $.each(data, function(index, value){
 		var row = '<tr><td id="header_' + value + '"></td>'
-			+ '<td><input type="radio" name="rl" value="' + value + '" id="rl_' + value + '"></td>'
-			+ '<td><input type="radio" name="lr" value="' + value + '" id="lr_' + value + '"></td>'
-			+ '<td><input type="text" name="' + value + '"></td>'
+			+ '<td class="rl"><input type="radio" name="rl" value="' + value + '" id="rl_' + value + '"></td>'
+			+ '<td class="lr"><input type="radio" name="lr" value="' + value + '" id="lr_' + value + '"></td>'
+			+ '<td class="ges"><input type="text" name="' + value + '"></td>'
 			+ '</tr>';
 
 		$('tbody').append(row);

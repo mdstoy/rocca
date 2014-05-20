@@ -1,0 +1,35 @@
+@CHARSET "UTF-8";
+
+thead th{
+	border: medium solid #339999;
+}
+
+thead th.rl{
+	border: medium solid #336699;
+}
+
+thead th.lr{
+	border: medium solid #339966;
+}
+
+thead th.ges{
+	border: medium solid #669966;
+}
+
+tbody td.rl{
+	border: medium solid #336699;
+	text-align: center;
+}
+
+tbody td.lr{
+	border: medium solid #339966;
+	text-align: center;
+}
+
+tbody td.ges{
+	border: medium solid #669966;
+}
+
+tbody td{
+	border: medium solid #339999;
+}
