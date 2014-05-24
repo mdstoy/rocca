@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head><title>Rocca Options</title></head>
+<head>
+  <title>Rocca Options</title>
+  <link rel="stylesheet" type="text/css" href="options.css">
+</head>
 <body>
-<table border="1">
-<thead>
-<th>action</th><th>R->L</th><th>L->R</th><th>gesture</th>
-</thead>
-<tbody>
-</tbody>
-</table>
+  <table>
+    <thead>
+    <tr>
+      <th>action</th><th class="rl">R->L</th><th class="lr">L->R</th><th class="ges">gesture</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
 
-<div id="status"></div>
-<button id="save">Save</button>
+  <div id="status"></div>
+  <button id="save">Save</button>
 
-<script src="jquery-2.1.1.min.js"></script>
-<script src="options.js"></script>
+  <div id="information"></div>
+
+  <script src="jquery-2.1.1.min.js"></script>
+  <script src="options.js"></script>
 </body>
 </html>
-

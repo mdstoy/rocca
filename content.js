@@ -8,7 +8,7 @@ var pressedRight = false;
 
 $(function(){
 	$(document).on('mousedown', function(e){
-		//console.log("down:" + e.button);
+		// console.log("down:" + e.button);
 		if(e.button == BUTTON_LEFT){
 			pressedLeft = true;
 		}else if(e.button == BUTTON_RIGHT){
@@ -23,7 +23,7 @@ $(function(){
 	});
 
 	$(document).on('mouseup', function(e){
-		//console.log("up:" + e.button);
+		// console.log("up:" + e.button);
 		if(e.button == BUTTON_LEFT){
 			pressedLeft = false;
 			canShowContext = false;
@@ -48,11 +48,11 @@ $(function(){
 });
 
 function execGesture(action){
-	console.log("exec!!" + action);
+	// console.log("exec!!" + action);
 	// after execution, reset mouse state
 	resetMouseStatus();
 	chrome.runtime.sendMessage({gesture: action}, function(response){
-		console.log("resp:"+response);
+		// console.log("resp:"+response);
 		if(response == 'history_back'){
 			history.back();
 		}else if(response == 'history_forward'){
