@@ -20,6 +20,9 @@ function toCamel(snake){
 
 $(function(){
 
+	// information message
+	//$('#information').text(chrome.i18n.getMessage('information'));
+
 	var data = [
 		"tab_remove"
 		, "history_back"

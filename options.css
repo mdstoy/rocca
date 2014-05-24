@@ -1,11 +1,11 @@
 @CHARSET "UTF-8";
 
 thead th{
-	border: medium solid #339999;
+	border: medium solid #336699;
 }
 
 thead th.rl{
-	border: medium solid #336699;
+	border: medium solid #339999;
 }
 
 thead th.lr{
@@ -16,8 +16,12 @@ thead th.ges{
 	border: medium solid #669966;
 }
 
-tbody td.rl{
+tbody td{
 	border: medium solid #336699;
+}
+
+tbody td.rl{
+	border: medium solid #339999;
 	text-align: center;
 }
 
@@ -30,6 +34,9 @@ tbody td.ges{
 	border: medium solid #669966;
 }
 
-tbody td{
-	border: medium solid #339999;
+div#information{
+	width: 50%;
+	border: medium solid #993333;
+	margin-top: 2em;
+	font-size: 1.5em;
 }

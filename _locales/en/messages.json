@@ -32,9 +32,12 @@
 	"pinnedTab": {
 		"message": "Pinned Tab"
 	},
-	// messages
+	// options.html
 	"saved": {
 		"message": "saved"
+	},
+	"information": {
+		"message": "Please contact me if you hope the addition of actions."
 	}
 }
 

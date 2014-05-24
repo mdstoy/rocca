@@ -32,9 +32,12 @@
 	"pinnedTab": {
 		"message": "タブの固定"
 	},
-	// messagest
+	// options.html
 	"saved": {
 		"message": "保存しました"
+	},
+	"information": {
+		"message": "ご意見・ご要望はこちらから→"
 	}
 }
 
